@@ -1,7 +1,7 @@
 
 # Urkuiash Korgonbekova
 ## Juinior Front End Developer at Optimizer.kg
-![urkuiash](https://github.com/ukulya/rsschool-cv-q1/blob/2ae626401a2bd315dea16fc37423f51676159d92/urkuiash.jpg)
+![urkuiash](https://raw.githubusercontent.com/ukulya/rsschool-cv-q1/2ae626401a2bd315dea16fc37423f51676159d92/urkuiash.jpg)
 * [+996709426433](tel:996709426433)
 * [ukulya150992@gmail.com](mailto:ukulya150992@gmail.com)
 * Urkuiash(@ukulya) - discord nick name 
