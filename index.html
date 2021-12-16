@@ -1,1 +1,221 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="style.css" rel="stylesheet">
+    <title>Urkuiash Korgonbekova CV</title>
+</head>
+<body>
+<header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <div class="navbar-brand">
+                <img src="https://raw.githubusercontent.com/ukulya/rsschool-cv-q1/2ae626401a2bd315dea16fc37423f51676159d92/urkuiash.jpg" alt="urkuiash-img">
+            </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#skills">Skills</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#code">Code</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#work">Work Experience</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#projects">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#education">Education</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#languages">Languages</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+<main>
+    <section id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <h3>About</h3>
+                    <h1>Urkuiash Korgonbekova</h1>
+                    <h2>Juinior Front End Developer at Optimizer.kg</h2>
+                    <p>I love studying - every day I learn something new.I am very accurate in every aspect of my life. I started my journey as a Front End Developer three years ago. I first learned HTML,CSS and basic JS. Same time I had enrolled in technical college,where I learned basics of SQL,JAVA,C++,C#. After I graduated from programming courses I applied for a job in local company.I successfully passed an interview and a test task and was accepted.Since then I have broadened my knowledge in JS and I picked up several frameworks and programing languages such as PHP,REACT,REDUX,MERN,Symphony,Laravel. Mostly my job is to integrate online-stores and info websites using Open Cart and Wordpress. But when I have time I like to explore new things in programming. Right now I have enrolled in Android development (Kotlin) course in local IT Academy. My goal is to keep going and never stop at what I am doing.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="skills">
+        <div class="container">
+            <h3>Skills</h3>
+            <div class="row">
+                <div class="col-lg-3">
+                    <ul>
+                        <li>JS</li>
+                        <li>PHP</li>
+                        <li>JAVA</li>
+                        <li>Kotlin</li>
+                    </ul>
+                </div>
+                <div class="col-lg-3">
+                    <ul>
+                        <li>SQL</li>
+                        <li>React</li>
+                        <li>Redux</li>
+                        <li>MERN</li>
+                    </ul>
+                </div>
+                <div class="col-lg-3">
+                    <ul>
+                        <li>Laravel</li>
+                        <li>Symphony</li>
+                        <li>Android</li>
+                        <li>Git</li>
+                    </ul>
+                </div>
+                <div class="col-lg-3">
+                    <ul>
+                        <li>Open Cart</li>
+                        <li>Wordpress</li>
+                        <li>Shopify</li>
+                        <li>REST API</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="code">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <h3>Code</h3>
+                    <pre>
+                        import {useGetCryptosQuery} from "../services/cryptoApi";
+                        import {useEffect, useState} from "react";
+                        import {Card, Col, Input, Row} from "antd";
+                        import {NavLink} from "react-router-dom";
+                        import millify from "millify";
 
+                        const Cryptocurrencies = ({simplified}) => {
+                            const count = simplified ? 10 : 50;
+                            //const count = 10;
+                            const {data: cryptosList,isFetching} = useGetCryptosQuery(count)
+                            //console.log(count) // 10
+                            //console.log(typeof count) // Number
+                            const [cryptos,setCryptos] = useState([])
+                            const [searchTerm,setSearchTerm] = useState('')
+
+                            useEffect(() => {
+                                const filteredData = cryptosList?.data?.coins.filter(coin => coin.name.includes(searchTerm))
+                                setCryptos(filteredData)
+                            },[cryptosList,searchTerm])
+
+                        if (isFetching) return "loading.."
+                        }
+                    </pre>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="work">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <h3>Work Experience</h3>
+                    <ul><li>Optimizer.kg - Junior Front End Developer - 2019 - Present</li></ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="projects">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <h3>Projects</h3>
+                    <h4><a href="https://almurut.store/">almurut.store</a></h4>
+                    <ul>
+                        <li>Open Cart</li>
+                        <li>Queries to DB</li>
+                        <li>Customized admin panel as per customer request</li>
+                        <li>PHP,JS,SQL</li>
+                    </ul>
+                    <h4><a href="http://moto.optimizer.kg/">moto.optimizer.kg</a></h4>
+                    <ul>
+                        <li>Wordpress</li>
+                        <li>Custom fields in admin panel</li>
+                        <li>PHP,JS</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="education">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <h3>Education</h3>
+                    <ul>
+                        <li>2021 - Ongoing IT Academy - Android Kotlin</li>
+                        <li>2021 - Online course - MERN</li>
+                        <li>2020 - 2021 Udemy - JS,REACT,REDUX</li>
+                        <li>2018 - 2021 College of Economics,Design and IT</li>
+                        <li>2018 - 2019 IT RUN - Front End Development Course</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="languages">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <h3>Languages</h3>
+                    <ul>
+                        <li>Kyrgyz,Russian - native</li>
+                        <li>English - B2</li>
+                        <li>German - A2</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <ul class="navbar-nav flex-row justify-content-center">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Urkuiash#1483 - discord contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Urkuiash(@ukulya) - discord nick name</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="mailto:ukulya150992@gmail.com">ukulya150992@gmail.com</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="tel:996709426433">+996709426433</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>
